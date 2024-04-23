@@ -40,9 +40,7 @@ The project is organized as follows:
 └── README.md                         # Project README
 ```
 
-- **data**: Contains the input corpus used for answering queries.
-- **notebooks**: Contains a Jupyter notebook for using the QnA tool.
-- **src**: Contains Python scripts for the QnA tool and utility functions.
+- **Corpus**: Contains the input corpus used for answering queries.
 - **README.md**: This file provides an overview and guide to the project.
 - **requirements.txt**: Lists the Python packages required for the project.
 
