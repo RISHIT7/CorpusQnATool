@@ -614,10 +614,10 @@ Node *QNA_tool::get_top_k_para(string question, int k)
     return nullptr;
 }
 
-void QNA_tool::query(string question, string filename)
+void QNA_tool::query(string question, string filename, string KEY)
 {
 
-    string API_KEY = "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";
+    string API_KEY = KEY;
     
     int k_paragraphs = 4;
 

@@ -1,10 +1,15 @@
 #include<bits/stdc++.h>
 #include "Node.h"
 #include "qna_tool.h"
-
 using namespace std;
 
-int main(){
+
+int main(int argc, char* argv[]){
+
+    if (argc != 2) {
+        std::cerr << "Usage: " << argv[0] << " <API_KEY>" << std::endl;
+        return 1;
+    }
 
     QNA_tool qna_tool;
 
@@ -95,7 +100,7 @@ int main(){
     }
     
     // Query the LLM
-    qna_tool.query(question, "api_call.py");
+    qna_tool.query(question, "api_call.py", argv[1]);
 
     return 0;
 }
