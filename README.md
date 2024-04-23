@@ -54,21 +54,20 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-1. **Prepare the Corpus**: Place your input corpus file in the `data` directory. Ensure the file is in a text format (e.g., `corpus.txt`).
+1. **Prepare the Corpus**: Place your input corpus file in the `Corpus` directory. Ensure the file is in a text format and has a file name Book_1.txt, and that the numbers are squential (e.g., `Book_1.txt`, `Book_2.txt`, `...`).
 
-2. **Run the QnA Tool**: Use the `qna_tool.ipynb` notebook or the `chatgpt_qna.py` script to load the input corpus and answer queries. The notebook provides an interactive environment for querying the tool.
+2. **Run the make file**: Run the make file with your chatGPT API_KEY as
+```bash
+make API_KEY=key
+```
 
 3. **Ask Questions**: Once the QnA tool is running, you can input a query and receive an answer based on the provided corpus.
 
 ## Customization
-You can customize the tool by modifying the source code in the `src` directory. For example, you can adjust the response format, specify additional options for ChatGPT, or add support for other types of input corpora.
+You can customize the tool by modifying the source code. For example, you can adjust the response format, specify additional options for ChatGPT, or add support for other types of input corpora.
 
 ## Contributing
 Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md) when submitting pull requests or issues.
 
 ## License
 This project is licensed under the [MIT License](LICENSE). Please see the LICENSE file for more details.
-
----
-
-Customize the README.md file according to the specifics of your project and the QnA tool's capabilities.
