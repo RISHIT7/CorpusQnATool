@@ -13,20 +13,14 @@ int main(){
     std::cout << "Inserting ..." << std::endl;
 
     for(int i = 1; i <= num_books; i++){
-
-        // std::cout << "Book " << i << std::endl;
-        if (i == 4)
-            continue;
-        std::cout << i << std::endl;
-
-        std::string filename = "MK Gandhi/mahatma-gandhi-collected-works-volume-";
+        std::string filename = "Corpus/Book_";
         filename += to_string(i);
         filename += ".txt";
 
         std::ifstream inputFile(filename);
 
         if (!inputFile.is_open()) {
-            std::cerr << "Error: Unable to open the input file mahatma-gandhi." << std::endl;
+            std::cerr << "Error: Unable to open the input file." << std::endl;
             return 1;
         }
 
@@ -85,12 +79,8 @@ int main(){
     string question;
     getline(cin, question);
 
-    /*
-        Part-1 : Get the top-k paragraphs
-        Checking Correctness
-    */
 
-    // Let's try to ask a simple question to the qna_tool
+    // Get the top-k paragraphs
     Node* head = qna_tool.get_top_k_para(question, 7);
 
     vector<string> paras;
@@ -103,21 +93,9 @@ int main(){
     for(int i = 0; i < (int)paras.size(); i++){
         cout << paras[i] << endl << endl << endl;
     }
-
-    /*
-        Part-2 : Query the LLM
-    */
+    
+    // Query the LLM
     qna_tool.query(question, "api_call.py");
-
-    /*string question1 = "Who was Sardar Vallabhbhai Patel?";
-    string question2 = "Who was Rajgopalachari?";
-    string question3 = "What is the purpose of life?";
-    string question4 = "What are the effects of tea and coffee according to Gandhiji?";
-
-    qna_tool.query(question1, "api_call.py");
-    qna_tool.query(question2, "api_call.py");
-    qna_tool.query(question3, "api_call.py");
-    qna_tool.query(question4, "api_call.py");*/
 
     return 0;
 }

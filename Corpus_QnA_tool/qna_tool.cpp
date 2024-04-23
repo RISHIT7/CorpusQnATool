@@ -4,8 +4,6 @@
 
 using namespace std;
 
-
-
 int maintainheight(QNA_tool::SymNode *root)
 {
     if (root == NULL)
@@ -36,8 +34,6 @@ QNA_tool::SymNode::SymNode(const SymNode &other)
     : key(other.key), height(other.height), count(other.count),
       score(other.score), par(other.par), left(nullptr), right(nullptr)
 {
-    // Additional code if needed
-    // cout << "copy node" << key;
 }
 
 QNA_tool::SymNode::SymNode(string k)
@@ -179,7 +175,6 @@ QNA_tool::SymNode *QNA_tool::SymNode::RightLeftRotation()
 
 QNA_tool::SymNode::~SymNode()
 {
-    // cout << "mem free at " << key << endl;
 }
 
 
@@ -648,7 +643,7 @@ std::string QNA_tool::get_paragraph(int book_code, int page, int paragraph)
 
     cout << "Book_code: " << book_code << " Page: " << page << " Paragraph: " << paragraph << endl;
 
-    std::string filename = "MK Gandhi/mahatma-gandhi-collected-works-volume-";
+    std::string filename = "Corpus/Book_";
     filename += to_string(book_code);
     filename += ".txt";
 
